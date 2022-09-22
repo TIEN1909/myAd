@@ -1,0 +1,37 @@
+hmtl{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+*{
+    margin:0;
+    padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+button,
+select {
+    box-sizing: border-box;
+}
+input {
+    line-height: normal;
+}
+label,
+button{
+    cursor: pointer;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+}

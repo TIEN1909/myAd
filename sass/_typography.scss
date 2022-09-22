@@ -1,0 +1,36 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: 700;
+}
+.heading{
+    font-size: 48px;
+    line-height: calc(58.51 / 48);
+    margin-bottom: 50px;
+    &__small{
+        font-size: 36px;
+        line-height: calc(43.88/ 36);
+        text-align: center;
+    }
+    &__title{
+        font-size: 20px;
+        line-height: calc(24.38 /20);
+    }
+}
+.text{
+    font-size: 16px;
+    line-height: calc(19.5/16);
+    &__small{
+        font-size: 14px;
+        line-height: calc(17.07/14);
+    }
+    &__admin{
+        font-size: 12px;
+        line-height: calc(14.63/12);
+        font-weight: 400;
+    }
+
+}

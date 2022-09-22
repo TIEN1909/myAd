@@ -1,0 +1,98 @@
+.activate{
+    margin-top: 100px;
+    margin-bottom: 126px;
+    &__container{
+        color: $white-color;
+    }
+    &__heading{
+        margin-bottom: 92px;
+        color: $text-color;
+    }
+    &__news{
+        @include display(flex,"",center,center);
+        height: 498px;
+    }
+    &__new:nth-child(1){
+       @include news (100%,cover,"24px",calc(24/29));
+        background-image: url(../images/activate1.png);
+        padding: 296px 43px 50px 43px;
+    }
+    &__new:nth-child(2){
+        height: 100%;
+    }
+    &__new--one{
+        position: relative;
+        @include display(flex,column,center,flex-start);
+    }
+    &__new--two,&__new--three{
+        padding: 46px 27px;
+        @include news(50%,cover,"24px",calc(24/29));
+        background-image: url(../images/activate2.png);
+        @include display(flex,column,center,flex-start);
+    }
+    &__heading-small,&__text{
+        z-index: 666;
+        margin-bottom: 25px;
+    }
+    &__new--two{
+        position: relative;
+        margin-top: 1px;
+    }
+    &__new--three{
+        position: relative;
+        background-image: url(../images/activate3.png);
+        margin-top: -1px;
+    }
+    &__imageL{
+        position: absolute;
+        left: 1px;
+        bottom: -28%;
+        transform: scale(1.17);
+        z-index: 1;
+    }
+    &__imageR{
+        position: absolute;
+        left: 1px;
+        z-index: 1;
+        transform: scale(1.01);
+    }
+}
+.btn__new{
+    color: $white-color;
+    z-index: 666;
+}
+@include maxw(1023px) {
+    .activate{
+        &__imageL{
+            left: 0;
+            bottom: -9%;
+            transform: scale(1.25);
+            z-index: 1;
+        }
+        &__imageR{
+            left: -1px;
+            z-index: 1;
+            transform: scaleY(1.55);
+        }
+    }
+}
+@include maxw(767px) {
+    .activate{
+        &__heading{
+            margin-bottom: 300px;
+        }
+        &__news{
+            flex-direction: column;
+            gap: 5px 0;
+        }
+        &__imageL{
+            bottom: 6%;
+            transform: scale(1.31);
+        }
+        &__new--two{
+            position: relative;
+            margin-top: 1px;
+            margin-bottom: 5px;
+        }
+    }
+}

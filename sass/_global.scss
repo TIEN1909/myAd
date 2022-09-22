@@ -1,0 +1,53 @@
+body{
+    line-height: 1;
+    font-family: " Montserrat", sans-serif;
+    color: $text-color;
+    font-weight: 700;
+}
+button {
+    outline: none;
+    border: none;
+    font-family:  'Montserrat', sans-serif;
+}
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.container{
+    max-width: 1196px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.btn{
+    display: inline-block;
+    padding : 10px 30px;
+    border-radius: 7px;
+    font-family: $font;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    outline: none;
+    text-align: center;
+    white-space: nowrap;
+    
+    &--primary{
+        background-color: $primary-color;
+        color: white;
+    }
+    &--outline{
+        background-color: transparent;
+        border: none;
+        color: $text-color;
+        padding :0 ;
+    }
+}
+.btn__more{
+    font-weight: 600;
+    transition: all 0.3s ease-in;
+    &:hover{
+        text-decoration-line:underline ;
+        opacity: 0.8;
+    }
+}

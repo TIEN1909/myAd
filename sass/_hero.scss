@@ -1,0 +1,192 @@
+.hero{
+    overflow: hidden;
+    padding-bottom: 50px;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 115px;
+        position: relative;
+    }
+    &__content{
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       margin-left: 166px;
+    }
+    &__heading{
+        width: 100%;
+        max-width: 601px;
+        margin-top: 116px;
+    }
+    &__desc{
+        width:100%;
+        max-width: 608px;
+        margin-bottom: 50px;
+        font-size: 20px;
+        text-align: justify;
+    }
+    &__slider{
+        display: none;
+    }
+    &__image-border{
+        &:nth-child(1){
+            position: absolute;
+            transform: rotate(-90deg);
+            right: -9px;
+            top: -39px;
+            z-index: -1;
+        }
+        &:nth-child(2){
+            position: absolute;
+            transform: rotate(-90deg);
+            right: -53px;
+            top: -84px;
+            z-index: -1;
+        }
+    }
+    &__number{
+        position: absolute;
+        top: 62%;
+        background-color: white;
+        padding: 29px;
+        z-index: 777;
+        border-radius: 50%;
+        right: 26%;
+        color: $primary-color;
+        &-border{
+            position: absolute;
+            width: 500px;
+            top: 63.5%;
+            right: -36px;
+            z-index: 777;
+            &-image{
+                width: 58px;
+            }
+        }
+    }
+    &__image-slider{
+        width: 480px;
+        transform: translate(1%, -8%);
+    }
+    &__dot{
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        margin-left: 15px;
+        background-color: transparent;
+        border: 2px solid $text-color;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        &-list{
+            position: absolute;
+            top: 92%;
+            right: 15%;
+        }
+        &:nth-child(1){
+            transform: translateY(-58px);
+        }
+        &:nth-child(2){
+            transform: translateY(-34px);
+        }
+        &:nth-child(3){
+            transform: translateY(-17px);
+        }
+        &:nth-child(4){
+            transform: translateY(-5px);
+        }
+    }
+}
+.btn__hero{
+    transition: $transiton;
+    &:hover{
+        background-color: transparent;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+}
+.active, .hero__dot:hover {
+    background-color: $text-color;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+@include maxw(1023px) {
+    .hero{
+        &__heading{
+            margin: 0;
+        }
+        &__content{
+            margin-left: 122px;
+        }
+        &__image-border{
+            &:nth-child(1){
+                right:-4px;
+                width: 235px;
+            }
+            &:nth-child(2){
+                right: -40px;
+                width: 310px;
+            }
+        }
+        &__image-slider{
+            transform: translate(1%, -57%);
+        }
+        &__number{
+            top: 21%;
+            padding: 20px;
+            right: 28%;
+            &-border{
+                top: 22%;
+                right: -26%;
+                &-image{
+                    width: 44px;
+                }
+            }
+        }
+        &__dot{
+            height: 11px;
+            width: 11px;
+            margin-left: 11px;
+            &-list{
+                top: 47%;
+            }
+            &:nth-child(1){
+                transform: translateY(-67px);
+            }
+            &:nth-child(2){
+                transform: translateY(-37px);
+            }
+            &:nth-child(3){
+                transform: translateY(-17px);
+            }
+            &:nth-child(4){
+                transform: translateY(-5px);
+            }
+        }
+    }
+}
+@include maxw(767px) {
+    .hero{
+        &__heading{
+            font-size: 37px;
+            margin-bottom: 15px;
+        }
+        &__content{
+            margin: 0;
+            padding: 0 15px;
+        }
+        &__image{
+            display: none;
+        }
+    }
+}

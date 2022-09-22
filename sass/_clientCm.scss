@@ -1,0 +1,82 @@
+.client__comment{
+    background-image: url(../images/clientCm.png);
+    background-size: cover;
+    padding: 114px 0;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    &-heading{
+        margin-bottom: 132px;
+        color: $white-color;
+    }
+    &-wrappers{
+        display: flex;
+        align-items: center;
+        margin-bottom: 132px;
+        gap :0 50px;
+        overflow: hidden;
+        white-space: nowrap;
+        user-select: none;
+        cursor: pointer;
+        overflow-x: auto;
+        &::-webkit-scrollbar{
+            width: 0;
+        }
+    }
+    &-detail{
+        display: inline-flex;
+        justify-content: center;
+    }
+    &-info{
+        background-color: $white-color;
+        max-width: 750px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    &-wrapper{
+        display: flex;
+        align-items: center;
+        gap : 0 20px;
+        margin-top: 19px;
+        margin-left: 20px;
+    }
+    &-title{
+        margin-bottom: 15px;
+    }
+    &-text{
+        margin: 30px  79px 30px 79px;
+        width: 592px;
+        white-space: normal;
+        & p{
+            width: 100%;
+            font-weight: 400;
+            font-style: italic;
+            text-align: justify;    
+        }
+    }
+}
+.btn-comment{
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    transition: $transiton;
+    &:hover{
+        color: $white-color;
+        background-color: transparent;
+        border: 1px solid $white-color;
+    }
+}
+@include maxw(767px) {
+    .client{
+        &__comment{
+            &-heading{
+                margin-bottom: 56px;
+            }
+            &-wrappers{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

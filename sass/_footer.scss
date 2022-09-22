@@ -1,0 +1,108 @@
+.footer{
+        background-image: url(../images/footerBgr.png);
+        background-size:cover ;
+        color: $white-color;
+        position: relative;
+    &__wrapper{
+        position: relative;
+        overflow: hidden;
+        z-index: 555;
+    }
+    &__group{
+        &-image{
+            margin-bottom: 25px;
+        }
+    }
+    &__text{
+        max-width: 100%;
+        min-height: 132px;
+        width: 365px;
+        font-size: 18px;
+        line-height: calc(21.94/18);
+        text-align: justify;
+        word-spacing: -3px;
+        margin-bottom: 90px;
+    }&__social{
+        display: flex;
+        align-items: center;
+        gap : 0 33px;
+        &-image{
+            background-color: $white-color;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            padding: 5px;
+        }
+    }
+    &__overview{
+        &-lists{
+            @include display (flex, column, space-between, flex-start);
+            gap : 26px 0; 
+            margin-top: 70px;
+        }
+        &-item{
+            &-link{
+                color:white;
+            }
+        }
+        &-icon{
+            margin-right: 30px;
+        }
+    }
+    &__branch{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        column-gap: 138px;
+        padding: 80px 0;
+        &-item{
+            &-link{
+                color:white;
+            }
+        }
+        &-title{
+            margin-bottom: calc(26px - 35px);
+        }
+        &-lists{
+            @include display (flex, column, space-between,flex-start);
+            gap : 35px 0;
+            margin-top: 61px;
+            color: $white-color;
+        }
+        &-icon{
+            margin-right: 18px;
+        }
+    }
+}
+.text__bottom{
+    text-align: center;
+    padding: 30px 0;
+    z-index: 888888;
+    color: white;
+}
+.footer__wrapper::after{
+    content: "";
+    width: 2526px;
+    height: 2204px;
+    position: absolute;
+    top: 65%;
+    right: -33%;
+    border-radius: 1261px;
+    z-index: -1;
+    background-color: $footer-color;
+    
+}
+@include maxw(1023px) {
+    .footer{
+        &__branch{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@include maxw(767px) {
+    .footer{
+        &__branch{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
