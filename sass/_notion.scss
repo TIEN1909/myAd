@@ -1,0 +1,33 @@
+.notion{
+    padding: 104px 0;
+    &__container{
+        @include display (flex, "",space-between,center);
+    }
+    &__content{
+        @include display(flex,column,space-between,flex-start);
+        gap: 70px 0;
+        max-width: 632px;
+        width: 100%;
+    }
+    &__heading{
+        font-size: 32px;
+        line-height: calc(39.01/32);
+    }
+    &__title{
+        text-align: justify;
+        font-weight: 600;
+    }
+}
+@include maxw(767px) {
+    .notion{
+        padding: 32px 0;
+        &__container{
+            flex-direction: column;
+        }
+        &__content{
+            align-items: center;
+            gap: 20px 0;
+            margin-top: 15px;
+        }
+    }
+}

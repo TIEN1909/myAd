@@ -1,0 +1,95 @@
+.contact{
+    background-image: url(../images/corevalues-bgr.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 94px 0;
+    &__container{
+        @include display(flex,"",space-between,center);
+    }
+    &__wrapper{
+        width: 630px;
+        padding: 50px 34px;
+        background-color: $white-color;
+        border-radius: 15px;
+        @include display(flex,column,space-between,flex-start);
+        gap: 20px 0;
+        flex-wrap: wrap;
+    }
+    &__heading{
+        font-size: 32px;
+        line-height: calc(39.01 /32);
+    }
+    &__text{
+        font-weight: 400;
+        font-style: italic;
+    }
+    &__infos{
+        width: 100%;
+        @include display(flex,"",space-between,center);
+        gap: 0 26px;
+    }
+    &__submit{
+        @include display(flex,column,space-between,flex-start);
+        gap: 25px 0;
+        border-right: 1px solid #D9D9D9;
+        padding-right: 20px;
+    }
+    &__input{
+        width: 300px;
+        border-top: none;
+        border-left:none;
+        border-right: none;
+        border-bottom: 1px solid $primary-color;
+        outline: none;
+    }
+    &__btn{
+        width: 100%;
+        background-color: $text-color;
+        padding: 7px 124px;
+        border: 2px solid transparent;
+        transition: $transiton;
+        &:hover{
+            color:$text-color;
+            background-color: transparent;
+            border:2px solid $text-color;
+        }
+    }
+    &__info{
+        width: 100%;
+        @include display(flex,column,space-between,flex-start);
+    }
+    &__title-small{
+        font-size: 22px;
+        line-height: calc(26.84 /22);
+        margin-bottom: 30px;
+    }
+    &__address{
+        @include display(flex,"",center,center);
+        gap: 0 17px;
+        font-size: 18px;
+        line-height: calc(21.94 /18);
+        margin-bottom: 29px;
+    }
+}
+@include maxw(1023px) {
+    
+}
+
+@include maxw(767px) {
+    .contact{
+        &__wrapper{
+            width: 365px;
+        }
+        &__infos{
+            flex-direction:column;
+            gap: 15px 0;
+        }
+        &__submit{
+            border:none;
+            padding-right: 0;
+        }
+        &__info{
+            align-items: center;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.overview{
+    padding: 127px 0;
+    &__container{
+        @include display (flex,"",space-between,center);
+        gap: 0 74px;
+    }
+    &__image{
+        position: relative;
+        &-item{
+            &:nth-child(2){
+                position: absolute;
+                top:50px;
+                left: 0;
+            }
+        }
+    }
+    &__content{
+        @include display (flex,column,space-between,flex-start);
+        gap: 70px 0;
+
+    }
+    &__text{
+        max-width: 684px;
+        width: 100%;
+        font-weight: 600;
+        text-align: justify;
+        @include display (flex,column,space-between,flex-start);
+        gap: 20px 0;
+        &-item{
+            display: block;
+        }
+    }
+}
+@include maxw(1023px) {
+    .overview{
+        padding-top: 0;
+    }
+}
+@include maxw(767px) {
+    .overview{
+        padding: 72px 0;
+        &__container{
+            flex-direction: column;
+        }
+        &__content{
+            align-items: center;
+            gap: 30px 0;
+        }
+    }
+}

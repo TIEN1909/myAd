@@ -1,0 +1,139 @@
+.procedure{
+    height: 500px;
+    &__container{
+        position: relative;
+        
+    }
+    &__image{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    &__heading{
+        margin-top: 139px;
+        font-size: 32px;
+        line-height: calc(39.01/32);
+    }
+    &__step{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 210px;
+        width: 100%;
+        gap: 155px 0;
+        margin-left: 20px;
+    }
+    &__texts{
+        &-even{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0 138px;
+        }
+        &-odd{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0 100px;
+            width:110%;
+            margin-left: 48px;
+        }   
+    }
+    &__text{
+        max-width: 200px;
+        width:100%;
+        // &-end{
+        //     width: 365px;
+        //     color: red;
+        // }
+        &:nth-child(2){
+            color: #0064A8;
+        }
+        &:nth-child(5){
+            color: #0064A8;
+        }
+        &:nth-child(3){
+            color: #359CEF;
+        }
+        &:nth-child(6){
+            color: #359CEF;
+        }
+        &-end{
+            color: #48DBFB;
+        }
+    }
+    
+}
+@include maxw(1023px) {
+    .procedure{
+        &__heading{
+            text-align: center;
+        }
+        &__step{
+            gap: 125px 0;
+        }
+        &__texts{
+            &-even{
+                gap: 0 30px;
+            }
+            &-odd{
+                margin-left: -85px;
+                gap: 0;
+                padding-left: 155px;
+            }
+        }
+        &__text{
+            max-width: 174px;
+            font-size: 15px;
+        }
+        &__image{
+            top: 220%;
+            width: 80%;
+        }
+    }
+}
+@include maxw(767px) {
+    .procedure{
+        &__heading{
+            margin-top: 45px;
+        }
+        &__step{
+            gap: 34px 0;
+            font-size: 10px;
+        }
+        &__texts{
+            &-even{
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 56px 0px;
+                flex-direction: column;
+                font-size: -1px;
+                margin-right: -181px;
+            }
+            &-odd{
+                flex-direction: column;
+                position: absolute;
+                gap: 54px 0;
+                width: 189%;
+                margin-left: -381px;
+                top: -25px;
+            }
+        }
+        &__text{
+            font-size: 12px;
+            max-width: 149px;
+        }
+        &__image{
+             top: 190px;
+             left: 6%;
+            transform: rotate(90deg);
+        }
+    }
+}

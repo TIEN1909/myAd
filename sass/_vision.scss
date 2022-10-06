@@ -1,0 +1,48 @@
+.vision{
+    padding: 127px 0;
+    &__container{
+        @include display (flex,"",space-between,center);
+        gap: 0 74px;
+    }
+    &__image{
+        position: relative;
+        &-item{
+            &:nth-child(2){
+                position: absolute;
+                top:50px;
+                left: 0;
+            }
+        }
+    }
+    &__content{
+        @include display (flex,column,space-between,flex-start);
+        gap: 70px 0;
+
+    }
+    &__text{
+        max-width: 684px;
+        width: 100%;
+        font-weight: 600;
+        text-align: justify;
+        @include display (flex,column,space-between,flex-start);
+        gap: 20px 0;
+        &-item{
+            display: block;
+        }
+    }
+}
+@include maxw(767px) {
+    .vision{
+        padding: 60px 0;
+        &__container{
+            flex-direction: column;
+        }
+        &__content{
+            gap: 20px 0;
+            margin-top: 15px;
+        }
+    }
+}
+
+
+
